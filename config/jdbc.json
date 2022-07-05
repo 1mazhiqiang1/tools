@@ -1,0 +1,264 @@
+{
+  "datasources": [{
+    "key":"ats_es",
+    "url": "jdbc:oracle:thin:@192.168.130.231:1521/hiup",
+    "driverclass": "oracle.jdbc.OracleDriver",
+    "username": "ATS_ES",
+    "password": "ATS_ES"
+  }
+  , {
+      "key":"scient_per",
+      "url": "jdbc:oracle:thin:@192.168.130.231:1521/hiup",
+      "driverclass": "oracle.jdbc.OracleDriver",
+      "username": "SCIENT_PER",
+      "password": "SCIENT_PER"
+    },
+    {
+      "key":"scient_research",
+      "url": "jdbc:oracle:thin:@192.168.130.231:1521/hiup",
+      "driverclass": "oracle.jdbc.OracleDriver",
+      "username": "scient_research",
+      "password": "scient_research"
+    }
+  ],
+  "tables": [{
+    "tablename": "tb_diagnostic_code",
+    "remark": "科研数据类型编码表",
+    "datasource_id": "ats_es"
+  },
+    {
+      "tablename": "tb_diagnostic_mapper",
+      "remark": "科研数据类型-主数据索引映射表",
+      "datasource_id": "ats_es"
+    },
+    {
+      "tablename": "tb_search_inspect_type",
+      "remark": "检验大类型编码表",
+      "datasource_id": "ats_es"
+    },
+    {
+      "tablename": "tb_search_inspect_target",
+      "remark": "检验小类型编码表",
+      "datasource_id": "ats_es"
+    },{
+      "tablename": "TB_SAMPLE",
+      "remark": "科研-样本管理表",
+      "datasource_id": "ats_es"
+    },{
+      "tablename": "TB_COMMON_SEARCHREQUEST",
+      "remark": "常用搜索条件表",
+      "datasource_id": "ats_es"
+    },{
+      "tablename": "TB_RESEARCH_LOG",
+      "remark": "用户操作日志表",
+      "datasource_id": "ats_es"
+    },{
+      "tablename": "TB_RESEARCH_EXPORT",
+      "remark": "导出申请表",
+      "datasource_id": "ats_es"
+    },{
+      "tablename": "TB_USER_SET_SEARCH ",
+      "remark": "科研-导出-用户设置的导出字段表",
+      "datasource_id": "ats_es"
+    },{
+      "tablename": "TB_USER_SET_SEARCH_RELATE",
+      "remark": "科研-导出-用户设置的导出字段第三层字段表",
+      "datasource_id": "ats_es"
+    },{
+      "tablename": "TB_FOLLOW_FIELD_DICT",
+      "remark": "随访-随访系统可用的字段表",
+      "datasource_id": "ats_es"
+    },{
+      "tablename": "tb_fields_search_request",
+      "remark": "科研-设置的过滤字段表",
+      "datasource_id": "ats_es"
+    },
+
+
+
+    {
+      "tablename": "TB_ADMIN_PERMISSION",
+      "remark": "科研-设置—超管权限表",
+      "datasource_id": "scient_per"
+    }, {
+      "tablename": "TB_ADMIN_USERGROUP",
+      "remark": "科研-设置—超管用户组",
+      "datasource_id": "scient_per"
+    }, {
+      "tablename": "TB_ADMIN_USERGROUP_USERS",
+      "remark": "科研-设置—超管组用户关系表",
+      "datasource_id": "scient_per"
+    }, {
+      "tablename": "TB_ADMINUSERGROUP_PERMISSION",
+      "remark": "科研-设置—超管组权限关系表",
+      "datasource_id": "scient_per"
+    }, {
+      "tablename": "TB_DB_ADMIN",
+      "remark": "科研-设置—数据库管理员表",
+      "datasource_id": "scient_per"
+    }, {
+      "tablename": "TB_DB_DEPT",
+      "remark": "科研-设置—数据库关联科室表",
+      "datasource_id": "scient_per"
+    }, {
+      "tablename": "TB_DB_FORMDEF",
+      "remark": "科研-设置—数据库表单关联表",
+      "datasource_id": "scient_per"
+    }, {
+      "tablename": "TB_DB_FUNCTION_CONFIG",
+      "remark": "科研-设置—数据库可用功能关联表",
+      "datasource_id": "scient_per"
+    }, {
+      "tablename": "TB_DB_RESOURCE",
+      "remark": "科研-设置—数据库表",
+      "datasource_id": "scient_per"
+    }, {
+      "tablename": "TB_FUNCTION_DICT",
+      "remark": "科研-设置—可用功能表",
+      "datasource_id": "scient_per"
+    }, {
+      "tablename": "TB_FUNCTION_OPERATION",
+      "remark": "科研-设置—可用功能权限关联表",
+      "datasource_id": "scient_per"
+    }, {
+      "tablename": "TB_JURISDICTION",
+      "remark": "界面功能表",
+      "datasource_id": "scient_per"
+    }, {
+      "tablename": "TB_JURISDICTION_FUNCTION",
+      "remark": "可用功能与界面功能关联表",
+      "datasource_id": "scient_per"
+    }, {
+      "tablename": "TB_JURISDICTION_OPERATION",
+      "remark": "科研-设置—界面功能与权限关联表",
+      "datasource_id": "scient_per"
+    }, {
+      "tablename": "TB_OPERATION",
+      "remark": "科研-设置—权限表",
+      "datasource_id": "scient_per"
+    }, {
+      "tablename": "TB_USER_GROUP",
+      "remark": "用户组表",
+      "datasource_id": "scient_per"
+    }, {
+      "tablename": "TB_USERGROUP_CONSUMER",
+      "remark": "科研-设置—组用户关联表",
+      "datasource_id": "scient_per"
+    }, {
+      "tablename": "TB_USERGROUP_PERMISSION",
+      "remark": "科研-设置—用户操作日志表",
+      "datasource_id": "scient_per"
+    },{
+      "tablename": "TB_EXPORT_FIELD_SETTING",
+      "remark": "科研-设置—导出字段已选表",
+      "datasource_id": "scient_per"
+    },{
+      "tablename": "tb_detaelementconfig",
+      "remark": "科研-设置—高级搜索字段已选表",
+      "datasource_id": "scient_per"
+    },{
+      "tablename": "tb_detaelement_dict_config",
+      "remark": "科研-设置—字段字典表",
+      "datasource_id": "scient_per"
+    },{
+      "tablename": "tb_db_followup_smstemplate",
+      "remark": "科研-设置—短信随访模板表",
+      "datasource_id": "scient_per"
+    },{
+      "tablename": "tb_db_formdef_showfield",
+      "remark": "科研-设置—导入设置展示字段表",
+      "datasource_id": "scient_per"
+    },{
+      "tablename": "tb_db_formdef_importfield",
+      "remark": "科研-设置—导入设置导入字段表",
+      "datasource_id": "scient_per"
+    },{
+      "tablename": "TB_DB_FOLLOW_FIELD_DICT",
+      "remark": "科研-设置—随访以配置字段字典表",
+      "datasource_id": "scient_per"
+    },{
+      "tablename": "search_result_field",
+      "remark": "科研-设置—配置结果展示字段字典表",
+      "datasource_id": "scient_per"
+    },{
+      "tablename": "dept_normal_searchfield",
+      "remark": "科研-设置—首页搜索查询字段字典表",
+      "datasource_id": "scient_per"
+    },
+
+
+    {
+      "tablename": "Tb_followup_project",
+      "remark": "随访-随访课题表",
+      "datasource_id": "scient_research"
+    },{
+      "tablename": "Tb_followup_project_user",
+      "remark": "随访-随访课题-用户表",
+      "datasource_id": "scient_research"
+    },{
+      "tablename": "tb_followup_cohort",
+      "remark": "随访-随访队列表",
+      "datasource_id": "scient_research"
+    },{
+      "tablename": "Tb_followup_cohort_user",
+      "remark": "随访-随访队列-用户表",
+      "datasource_id": "scient_research"
+    },{
+      "tablename": "tb_followup_schema",
+      "remark": "随访-随访-随访方案表",
+      "datasource_id": "scient_research"
+    },{
+      "tablename": "tb_followup_plan",
+      "remark": "随访计划表",
+      "datasource_id": "scient_research"
+    },{
+      "tablename": "Tb_followup_Schedule",
+      "remark": "随访-随访排期表",
+      "datasource_id": "scient_research"
+    },{
+      "tablename": "tb_followup_plan_formdef",
+      "remark": "随访-随访计划-表单对应表",
+      "datasource_id": "scient_research"
+    },{
+      "tablename": "tb_followup_patient_plan_form",
+      "remark": "随访-随访病人-计划-表单对应表",
+      "datasource_id": "scient_research"
+    },{
+      "tablename": "tb_followup_conflict_patient",
+      "remark": "随访-病人自动加入冲突队列表",
+      "datasource_id": "scient_research"
+    },{
+      "tablename": "tb_followup_choose_cohort",
+      "remark": "随访-病人手动加入队列表",
+      "datasource_id": "scient_research"
+    },{
+      "tablename": "tb_followup_sampleoperate_log",
+      "remark": "随访-病人样本管理记录表",
+      "datasource_id": "scient_research"
+    },{
+      "tablename": "tb_follow_sms",
+      "remark": "随访-短信记录表",
+      "datasource_id": "scient_research"
+    },{
+      "tablename": "TB_DB_AUTOLABEL",
+      "remark": "科研-自动标签表",
+      "datasource_id": "scient_research"
+    },{
+      "tablename": "TB_DB_LABEL",
+      "remark": "科研-标签表",
+      "datasource_id": "scient_research"
+    },{
+      "tablename": "TB_LABEL_FORM_RELATION",
+      "remark": "科研-标签表单关系表",
+      "datasource_id": "scient_research"
+    },{
+      "tablename": "TB_LABEL_GROUP",
+      "remark": "科研-标签组表",
+      "datasource_id": "scient_research"
+    },{
+      "tablename": "TB_LABEL_RELATION",
+      "remark": "科研- 标签关系表",
+      "datasource_id": "scient_research"
+    }
+  ]
+}

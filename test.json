@@ -1,0 +1,23 @@
+{
+   "name":"张铁柱",
+   "age":25,
+   "height":185.5,
+   "major":
+   [
+      {
+         "job1":"worker",
+         "job2":"doctor"
+      },
+      {
+         "job3":"teacher",
+         "job4":"student"
+      }
+
+   ],
+   "houseLocation":
+   {
+      "x":30,
+      "y":30
+   }
+
+}
